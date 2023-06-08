@@ -1,7 +1,7 @@
 Name: Ashim Batajoo
 StudentID: 301324691
 
-###Portfolio Application
+### Portfolio Application
 This static web application, built using the Angular framework and PrimeNG UI library, consists of five pages with distinct functionalities:
 
 1. **Home**: The landing page provides basic information about the application.
@@ -12,7 +12,7 @@ This static web application, built using the Angular framework and PrimeNG UI li
 
 This application combines aesthetic appeal with user-friendly features, aiming to engage visitors and facilitate efficient communication with the creator.
 
-###Library
+### Library
                     
 Name | Version
 ------------- | -------------
