@@ -15,6 +15,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { StyleClassModule } from 'primeng/styleclass';
+import { TooltipModule } from 'primeng/tooltip';
 
 // Component Declarations
 import { AppComponent } from './app.component';
@@ -60,6 +61,7 @@ import { UrlSanitizerPipe } from './url-sanitizer.pipe';
         InputTextModule,
         InputMaskModule,
         InputTextareaModule,
+        TooltipModule
     ],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],

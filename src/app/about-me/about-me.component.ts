@@ -9,7 +9,8 @@ export class AboutMeComponent {
     private readonly linkedInURL: string =
         'https://www.linkedin.com/in/ashim-batajoo-257815129/';
     private readonly youtubeURL: string = 'https://www.youtube.com/@ashimbatajoo';
-    private readonly imageURL: string = 'https://500px.com/p/AsimBatajoo'
+    private readonly imageURL: string = 'https://500px.com/p/AsimBatajoo';
+    private readonly resumeURL: string = `https://drive.google.com/file/d/1wFGdc92unfqrWNZWk4CWUReUy-vICfAV/view?usp=drive_link`;
 
     public get DescriptionText(): string {
         return `But that's not all—I've also got a solid background as a
@@ -36,5 +37,8 @@ export class AboutMeComponent {
     
     public OnClickImageButton(): void {
         window.open(this.imageURL, '_blank');
+    }
+    public OnClickResumeButton(): void {
+        window.open(this.resumeURL, '_blank');
     }
 }

@@ -1,5 +1,4 @@
 <div class="grid">
-    <div class="col-3"></div>
     <div class="col-12 md:col-6">
         <div class="card p-fluid">
             <h5>Contact</h5>
@@ -107,6 +106,46 @@
                     [disabled]="ContactForm.invalid"
                 ></button>
             </form>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="card p-fluid">
+            <div class="field grid">
+                <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0"
+                    >Name:</label
+                >
+                <div class="col-12 md:col-10">
+                    <b>Ashim Batajoo</b>
+                </div>
+            </div>
+            <div class="field grid">
+                <label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0"
+                    >Contact:</label
+                >
+                <div class="col-12 md:col-10">
+                    <b>(123)-123-1234</b>
+                </div>
+            </div>
+            <div class="field grid">
+                <label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0"
+                    >Email:</label
+                >
+                <div class="col-12 md:col-10">
+                    <b>mailtoashim@mail.com</b>
+                </div>
+            </div>
+            <div class="field grid justify-center">
+                <button
+                    pButton
+                    pRipple
+                    type="button"
+                    icon="pi pi-linkedin"
+                    pTooltip="Contact on LinkedIn"
+                    tooltipPosition="bottom"
+                    (click)="OnClickOpenLinkedInButton()"
+                    class="p-button-rounded p-button-outlined"
+                ></button>
+            </div>
         </div>
     </div>
 </div>

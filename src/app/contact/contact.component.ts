@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
     public ContactForm: any;
+    private readonly linkedInURL: string =
+        'https://www.linkedin.com/in/ashim-batajoo-257815129/';
 
     constructor(private formBuilder: FormBuilder, private router: Router) {}
 
@@ -22,6 +24,11 @@ export class ContactComponent implements OnInit {
             invalidText: [''],
         });
     }
+    
+    public OnClickOpenLinkedInButton(): void {
+        window.open(this.linkedInURL, '_blank');
+    }
+
 
     public OnClickSubmitForm() {
         if (this.ContactForm.valid) {
