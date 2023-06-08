@@ -1,0 +1,58 @@
+<div id="projects" class="px-4 lg:px-8 mx-0 lg:mx-8">
+    <div class="text-center">
+        <h2 class="text-900 font-normal mb-2">Projects</h2>
+        <span class="text-600 text-2xl">My Photo Gallery</span>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="grid">
+                <div class="col-4" *ngFor="let photo of Photos">
+                    <div class="flex justify-content-center">
+                        <p-image
+                            [src]="photo.image"
+                            [alt]="photo.title"
+                            width="250"
+                            [preview]="true"
+                        ></p-image>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <span class="text-600 text-2xl">My Youtube Videos</span>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="grid">
+                <div class="col-4" *ngFor="let video of Videos">
+                    <div class="flex justify-content-center">
+                        <p-card
+                            [header]="video.title"
+                            [style]="{ width: '300px', height: '620px' }"
+                        >
+                            <ng-template pTemplate="header">
+                                <iframe
+                                    width="100%"
+                                    height="300"
+                                    [src]="
+                                        video.link
+                                            | urlSanitizer : 'resourceUrl'
+                                    "
+                                    title="Ride to Aatighar Village Mauja Pokhara Cycling"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                ></iframe>
+                            </ng-template>
+                            <p class="video-description">
+                                {{ video.description }}
+                            </p>
+                        </p-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

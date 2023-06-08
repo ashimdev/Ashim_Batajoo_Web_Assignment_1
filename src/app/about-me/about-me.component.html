@@ -1,0 +1,71 @@
+<div id="aboutMe" class="px-4 lg:px-8 mx-0 lg:mx-8">
+    
+    <div class="grid grid-nogutter surface-section text-800 ashim-main-div">
+        <div
+            class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center"
+        >
+            <section>
+                <div class="grid">
+                    <div class="col-12 text-left mb-4">
+                        <h2 class="text-900 font-normal mb-2">About Me</h2>
+                    </div>
+                    <div class="col-2">
+                        <button
+                            pButton
+                            pRipple
+                            type="button"
+                            icon="pi pi-linkedin"
+                            (click)="OnClickOpenLinkedInButton()"
+                            class="p-button-rounded p-button-outlined"
+                        ></button>
+                    </div>
+                    <div class="col-2">
+                        <button
+                            pButton
+                            pRipple
+                            type="button"
+                            icon="pi pi-youtube"
+                            (click)="OnClickYoutubeButton()"
+                            class="p-button-rounded p-button-danger p-button-outlined"
+                        ></button>
+                    </div>
+                    <div class="col-2">
+                        <button
+                            pButton
+                            pRipple
+                            type="button"
+                            icon="pi pi-image"
+                            (click)="OnClickImageButton()"
+                            class="p-button-rounded p-button-secondary p-button-outlined"
+                        ></button>
+                    </div>
+                </div>
+                <span class="block text-xl font-bold mb-1"> Hey there!</span>
+                <div class="text-xl text-primary font-bold mb-3">
+                    <p [innerHTML]="IntroText"></p>
+                </div>
+                <p
+                    class="mt-0 mb-4 text-700 line-height-3 ashim-justify-text"
+                >
+                    {{DescriptionText}}
+                </p>
+            </section>
+        </div>
+        <div class="col-12 md:col-6 overflow-hidden">
+            <img
+                src="assets//layout/images/ashim-cycling.jpg"
+                alt="Image"
+                class="md:ml-auto block md:h-full ashim-image"
+            />
+        </div>
+    </div>
+    <div class="col-12 overflow-hidden">
+        <h2>Resume</h2>
+        <embed
+            src="assets/pdf/ashim-batajoo.pdf"
+            type="application/pdf"
+            width="100%"
+            height="600px"
+        />
+    </div>
+</div>
