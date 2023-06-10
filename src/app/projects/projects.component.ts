@@ -51,4 +51,60 @@ export class ProjectsComponent {
     }
   ];
 
+  public NayaSoftwareProjects = [
+    {
+      title: 'API Integration',
+      description: `Successfully executed a complex API integration project, facilitating efficient communication and data synchronization across multiple systems. This project showcased expertise in API design, development, and seamless system integration.`
+    },
+    {
+      title: 'Word Integration (WOPI Framework)',
+      description: `Integrated WOPI Framework for Word Web, enhancing functionality and seamless integration in .NET Core API and Angular app.`
+    },
+    {
+      title: 'OAuth 2.0 Integration',
+      description: 'Enabled secure authentication and authorization by integrating OAuth 2.0 in API and Angular, ensuring seamless user access to protected resources. Implemented robust security measures for authentication and authorization workflows, enhancing overall system security.'
+    },
+    {
+      title: 'Document Comparision',
+      description: `Developed document comparison functionality using Aspose library for precise identification of differences. Leveraged robust features of Aspose for accurate highlighting and seamless integration, demonstrating expertise in document processing and comparison solutions.`
+    },
+    {
+      title: 'Dynamic Document Creation (OpenXML Library)',
+      description: `Integrated OpenXML library into .NET Core API for seamless document processing and manipulation, enabling document generation, modification, and data extraction. Demonstrated proficiency in leveraging OpenXML functionalities for various document formats.`
+    },
+    {
+      title: 'PDF Text Recognition (Sync Fusion OCR Library)',
+      description: `Implemented Syncfusion OCR library for PDF text recognition, facilitating extraction and processing of textual content from PDF documents. Enhanced data analysis capabilities, enabling automated extraction, search, and indexing of textual data within PDF files.`
+    },
+    {
+      title: 'Real-time Project Updates (Sync Fusion Library)',
+      description: `Implemented real-time project updates using Syncfusion library, enabling seamless collaboration and instant progress tracking.`
+    },
+    {
+      title: 'Word Add In (VSTO Add-In Library)',
+      description: 'Developed Word Add-In using VSTO-AddIn, expanding document processing capabilities in Microsoft Word.'
+    }
+    ,
+    {
+      title: 'Project Management',
+      description: `Successfully coordinated development and testing process in Nepal, collaborating with the US team. Provided strong leadership, training, and guidance to foster a high-performing work environment 
+      for the development and test team.`
+    }
+  ];
+
+  public IMarkDigitalProjects = [
+    {
+      title: '.NET Core API',
+      description: `As a .NET Core developer, I built and implemented diverse endpoints in a RESTful API, meeting various requirements. Business logic services were integrated for efficient and reliable data processing, leveraging the power of the .NET Core framework for a robust and scalable API solution.`
+    },
+    {
+      title: 'Angular Web Application',
+      description: `Build Hospital Web Application in AngularDeveloped a dynamic and user-friendly hospital web interface using the Angular framework. Created modules for Patient Registration, Billing, Clinical, and Radiology, enhancing functionality and improving the user experience.`
+    },
+    {
+      title: 'Module Integration',
+      description: `Developed and seamlessly integrated modules for Patient Registration, Billing, and Lab Reports into the Hospital Management system, enhancing functionality and streamlining processes.`
+    }
+  ];
+
 }
