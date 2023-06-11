@@ -21,6 +21,14 @@ PrimeNG  | 15.1.1
 Prime Flex  | 3.2.1
 Prime Icons  | 6.0.1
 
-## Development server
+### Published Application: 
+https://ashimdev.github.io/Ashim_Batajoo_Web_Assignment_1/
 
+### Google Slides:
+https://docs.google.com/presentation/d/1ClkBhlODEvVg1pjHjeRA16SWrEiNUw8KqY8WZRzNgrk/edit?usp=sharing
+
+### Demo Video Link:
+https://drive.google.com/file/d/1tVBfwb_54Fu5rJUWQPQXkNSPC9jON4BD/view?usp=sharing
+
+### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
