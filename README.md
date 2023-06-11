@@ -6,7 +6,7 @@ This static web application, built using the Angular framework and PrimeNG UI li
 
 1. **Home**: The landing page provides basic information about the application.
 2. **About Me**: This page describes the creator, including links to LinkedIn, YouTube, 500px, and a Resume.
-3. **Projects**: A gallery of photography projects accompanied by embedded YouTube videos.
+3. **Projects**: The projects that I was involved in the last compaines, gallery of photography projects accompanied by embedded YouTube videos.
 4. **Services**: A list of services offered, each with a description.
 5. **Contact**: Contact information and a convenient form that opens an inbuilt mail client when submitted.
 
