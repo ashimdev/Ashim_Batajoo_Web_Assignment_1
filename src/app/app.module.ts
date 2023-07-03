@@ -17,6 +17,7 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { StyleClassModule } from 'primeng/styleclass';
 import { TooltipModule } from 'primeng/tooltip';
+import { TableModule } from 'primeng/table';
 
 // Component Declarations
 import { AppComponent } from './app.component';
@@ -29,6 +30,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
+import { BusinessContactListComponent } from './business-contact-list/business-contact-list.component';
+import { BusinessContactEditPageComponent } from './business-contact-edit-page/business-contact-edit-page.component';
 
 // Helpers
 import { UrlSanitizerPipe } from './url-sanitizer.pipe';
@@ -45,6 +48,8 @@ import { UrlSanitizerPipe } from './url-sanitizer.pipe';
         ServicesComponent,
         ContactComponent,
         UrlSanitizerPipe,
+        BusinessContactListComponent,
+        BusinessContactEditPageComponent,
     ],
     imports: [
         // Angular Imports
@@ -64,7 +69,8 @@ import { UrlSanitizerPipe } from './url-sanitizer.pipe';
         InputTextModule,
         InputMaskModule,
         InputTextareaModule,
-        TooltipModule
+        TooltipModule,
+        TableModule
     ],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],
