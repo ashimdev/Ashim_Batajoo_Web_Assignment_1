@@ -4,6 +4,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // Prime NG Imports
 import { DividerModule } from 'primeng/divider';
@@ -31,6 +32,7 @@ import { ContactComponent } from './contact/contact.component';
 
 // Helpers
 import { UrlSanitizerPipe } from './url-sanitizer.pipe';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -50,6 +52,7 @@ import { UrlSanitizerPipe } from './url-sanitizer.pipe';
         BrowserAnimationsModule,
         ReactiveFormsModule,
         AppRoutingModule,
+        HttpClientModule,
 
         // Prime NG Imports
         DividerModule,
