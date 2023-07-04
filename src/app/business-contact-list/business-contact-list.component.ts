@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Table } from 'primeng/table';
-import { BusinessContactService } from '../endpoint-services/business-contact.service';
+import { BusinessContactService } from '../app-services/business-contact.service';
 import { BusinessContact } from '../interfaces/business-contact.interface';
 import { Router } from '@angular/router';
 import { ConfirmationService, MessageService } from 'primeng/api';

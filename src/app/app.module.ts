@@ -4,8 +4,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 // Prime NG Imports
 import { DividerModule } from 'primeng/divider';
 import { PanelModule } from 'primeng/panel';
@@ -20,6 +20,8 @@ import { TooltipModule } from 'primeng/tooltip';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { PasswordModule } from 'primeng/password';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 // Component Declarations
 import { AppComponent } from './app.component';
@@ -34,10 +36,11 @@ import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { BusinessContactListComponent } from './business-contact-list/business-contact-list.component';
 import { BusinessContactEditPageComponent } from './business-contact-edit-page/business-contact-edit-page.component';
+import { LoginComponent } from './login/login.component';
 
 // Helpers
 import { UrlSanitizerPipe } from './url-sanitizer.pipe';
-import { ConfirmationService, MessageService } from 'primeng/api';
+import { AuthInterceptor } from './app-interceptors/auth-interceptor';
 
 @NgModule({
     declarations: [
@@ -53,6 +56,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
         UrlSanitizerPipe,
         BusinessContactListComponent,
         BusinessContactEditPageComponent,
+        LoginComponent,
     ],
     imports: [
         // Angular Imports
@@ -61,6 +65,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
         ReactiveFormsModule,
         AppRoutingModule,
         HttpClientModule,
+        FormsModule,
 
         // Prime NG Imports
         DividerModule,
@@ -75,9 +80,18 @@ import { ConfirmationService, MessageService } from 'primeng/api';
         TooltipModule,
         TableModule,
         ToastModule,
-        ConfirmPopupModule
+        ConfirmPopupModule,
+        PasswordModule
     ],
-    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, MessageService, ConfirmationService],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, 
+        MessageService, 
+        ConfirmationService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true,
+        }
+    ],
     bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

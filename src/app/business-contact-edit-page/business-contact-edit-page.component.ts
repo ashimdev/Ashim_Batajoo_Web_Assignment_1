@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BusinessContactService } from '../endpoint-services/business-contact.service';
+import { BusinessContactService } from '../app-services/business-contact.service';
 import { BusinessContact } from '../interfaces/business-contact.interface';
 import { ConfirmationService, MessageService } from 'primeng/api';
 
