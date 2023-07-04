@@ -39,13 +39,15 @@
                 </div>
                 <div class="grid">
                     <div class="col-4">
-                        <button pButton pRipple type="submit" [disabled]="BusinessContactForm.invalid" label="Update"></button>
+                        <button pButton pRipple type="submit" [disabled]="BusinessContactForm.invalid" [label]="BusinessContactID ? 'Update' : 'Create'"></button>
+                        
                     </div>
                     <div class="col-4">
-                        <button pButton pRipple type="button" label="Cancel" class="p-button-secondary"></button>
+                        <button pButton pRipple type="button" label="Cancel" (click)="OnClickCancelButton()" class="p-button-secondary"></button>
                     </div>
-                    <div class="col-4">
-                        <button pButton pRipple type="button" label="Delete" class="p-button-danger"></button>
+                    <div class="col-4">  <p-toast></p-toast>
+                        <p-confirmPopup key="delete"></p-confirmPopup>
+                        <button pButton pRipple type="button" label="Delete" (click)="OnClickDeleteButton($event)" class="p-button-danger"></button>
                     </div>
            
             </div>

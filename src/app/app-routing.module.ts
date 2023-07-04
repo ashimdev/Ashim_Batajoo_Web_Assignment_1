@@ -20,6 +20,7 @@ import { BusinessContactEditPageComponent } from './business-contact-edit-page/b
             { path: 'services', component: ServicesComponent },
             { path: 'contact', component: ContactComponent },
             { path: 'businessContact', component: BusinessContactListComponent },
+            { path: 'businessContact/create', component: BusinessContactEditPageComponent },
             { path: 'businessContact/:businessContactID', component: BusinessContactEditPageComponent },
             { path: 'notfound', component: NotfoundComponent },
             { path: '**', redirectTo: '/notfound' },

@@ -10,8 +10,8 @@ export class BusinessContactService {
 
 	constructor(private http: HttpClient) { }
 	
-	public Create(businessContactID: string, businessContact: BusinessContact) {
-		return this.http.put<BusinessContact[]>(`${environment.apiURL}/businessContact/${businessContactID}`, businessContact);
+	public Create(businessContact: BusinessContact) {
+		return this.http.post<BusinessContact[]>(`${environment.apiURL}/businessContact`, businessContact);
 	}
 
 	public Update(businessContactID: string, businessContact: BusinessContact) {

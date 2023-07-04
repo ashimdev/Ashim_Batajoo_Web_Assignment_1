@@ -18,6 +18,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { StyleClassModule } from 'primeng/styleclass';
 import { TooltipModule } from 'primeng/tooltip';
 import { TableModule } from 'primeng/table';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
 
 // Component Declarations
 import { AppComponent } from './app.component';
@@ -35,6 +37,7 @@ import { BusinessContactEditPageComponent } from './business-contact-edit-page/b
 
 // Helpers
 import { UrlSanitizerPipe } from './url-sanitizer.pipe';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 @NgModule({
     declarations: [
@@ -70,9 +73,11 @@ import { UrlSanitizerPipe } from './url-sanitizer.pipe';
         InputMaskModule,
         InputTextareaModule,
         TooltipModule,
-        TableModule
+        TableModule,
+        ToastModule,
+        ConfirmPopupModule
     ],
-    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, MessageService, ConfirmationService],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

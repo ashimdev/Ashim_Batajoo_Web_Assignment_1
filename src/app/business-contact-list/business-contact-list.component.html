@@ -2,7 +2,7 @@
     <div class="col-12">
         <div class="card">
             <h5>Business Contacts</h5>
-            <p-table #dt1 [value]="BusinessContactList" dataKey="id" [rows]="10" [loading]="loading" [rowHover]="true"
+            <p-table #dt1 [value]="BusinessContactList" dataKey="id" [rows]="10" [loading]="Loading" [rowHover]="true"
                 styleClass="p-datatable-gridlines" [paginator]="true"
                 [globalFilterFields]="['contactName','contactNumber','emailAddress']" responsiveLayout="scroll">
                 <ng-template pTemplate="caption">
@@ -12,6 +12,9 @@
                             <input pInputText type="text" #filter (input)="onGlobalFilter(dt1, $event)"
                                 placeholder="Search Keyword" class="w-full" />
                         </span>
+                        <button pButton pRipple type="button" (click)="OnClickCreateButton()"
+                            pTooltip="Create Business Contact" tooltipPosition="bottom" icon="pi pi-plus"
+                            class="p-button-rounded"></button>
                     </div>
                 </ng-template>
                 <ng-template pTemplate="header">
@@ -51,9 +54,14 @@
                         </td>
                         <td>
                             <div class="flex flex-wrap gap-2">
-                                <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded"></button>
-                                <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger"></button>
-                            </div>                            
+                                <button pButton pRipple type="button" (click)="OnClickEditButton(businessContact._id)"
+                                    pTooltip="Edit" tooltipPosition="bottom" icon="pi pi-pencil"
+                                    class="p-button-rounded"></button>
+
+                                <button (click)="OnClickDeleteButton($event, businessContact._id)" pButton
+                                    icon="pi pi-trash" class="p-button-rounded p-button-danger"></button>
+                                <p-confirmPopup key="delete"></p-confirmPopup>
+                            </div>
                         </td>
 
                     </tr>
