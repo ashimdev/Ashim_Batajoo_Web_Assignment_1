@@ -72,7 +72,7 @@ export class BusinessContactListComponent implements OnInit {
     this._businessContactService.Get()
       .subscribe({
         next: (businessContact: BusinessContact[]) => {
-          this.BusinessContactList = businessContact;
+          this.BusinessContactList = businessContact.sort(this.dynamicSort("contactName"));
           this.Loading = false;
 
         },
@@ -85,6 +85,21 @@ export class BusinessContactListComponent implements OnInit {
 
   onGlobalFilter(table: Table, event: Event) {
     table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
+  }
+
+  private dynamicSort(property: string) {
+    var sortOrder = 1;
+    if (property[0] === "-") {
+      sortOrder = -1;
+      property = property.substr(1);
+    }
+    return function (a: any, b: any) {
+      /* next line works with strings and numbers, 
+       * and you may want to customize it to your needs
+       */
+      var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+      return result * sortOrder;
+    }
   }
 
 }
