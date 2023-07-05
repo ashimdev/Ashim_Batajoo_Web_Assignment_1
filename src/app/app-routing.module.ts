@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BusinessContactListComponent } from './business-contact-list/business-contact-list.component';
 import { BusinessContactEditPageComponent } from './business-contact-edit-page/business-contact-edit-page.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './app-guards/auth.guard';
 
 @NgModule({
     imports: [
@@ -20,9 +21,14 @@ import { LoginComponent } from './login/login.component';
             { path: 'projects', component: ProjectsComponent },
             { path: 'services', component: ServicesComponent },
             { path: 'contact', component: ContactComponent },
-            { path: 'businessContact', component: BusinessContactListComponent },
-            { path: 'businessContact/create', component: BusinessContactEditPageComponent },
-            { path: 'businessContact/:businessContactID', component: BusinessContactEditPageComponent },
+            {
+                path: 'businessContact', canActivate: [AuthGuard],
+                children: [
+                    { path: '', component: BusinessContactListComponent },
+                    { path: 'create', component: BusinessContactEditPageComponent },
+                    { path: ':businessContactID', component: BusinessContactEditPageComponent },
+                ]
+            },
             // { path: 'notfound', component: NotfoundComponent },
             // { path: '**', redirectTo: '/notfound' },
         ], { scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })

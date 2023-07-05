@@ -21,6 +21,7 @@ import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { PasswordModule } from 'primeng/password';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService, MessageService } from 'primeng/api';
 
 // Component Declarations
@@ -81,7 +82,8 @@ import { AuthInterceptor } from './app-interceptors/auth-interceptor';
         TableModule,
         ToastModule,
         ConfirmPopupModule,
-        PasswordModule
+        PasswordModule,
+        ConfirmDialogModule
     ],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, 
         MessageService, 

@@ -9,7 +9,7 @@ import { tap } from 'rxjs';
 })
 export class UserService {
 
-    private _user: User | undefined;
+    private _user: User | undefined | null;
 
 	constructor(private http: HttpClient) { }
 
@@ -22,5 +22,9 @@ export class UserService {
 
 	public GetAccessToken(): string | undefined{
 		return this._user?.token;
+	}
+
+	public Logout() {
+		this._user = null;
 	}
 }
